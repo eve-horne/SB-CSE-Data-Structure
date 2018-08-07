@@ -125,7 +125,7 @@ https://case.smarterbalanced.org/ims/case/v1p0/CFDocuments?limit=99999999999&off
 
 You'll notice that the ``Limit`` parameter is 999999999, this is just to ensure the API call returns ALL of the Content Spec Documents.
 
-*Note: For some dumb reason, CASE will always return 2-3 less entries than specified in the ``Limit`` parameter.*
+*Note: CASE will always return 2-3 less entries than specified in the ``Limit`` parameter.*
 
 * The Response Body will be an array of all the CFDocument objects stored in the CASE DB
 
