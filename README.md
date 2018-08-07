@@ -287,7 +287,8 @@ From here, referencing the above table should be helpful in filling out the rest
 * Complexity can be found at ``CFItems[index].fullStatement`` where ``CFItems[index].abbreviatedStatement === "Stimuli/Text Complexity"``
 * DualText can be found at ``CFItems[index].fullStatement`` where ``CFItems[index].abbreviatedStatement === "Dual-Text Stimuli"``
 
-**The following items are related to TaskModel entries: **
+
+**The following items are related to TaskModel entries:**
 
 * Stem entries can be found at ``CFItems[index].fullStatement`` where ``CFItems[index].CFItemType === "Stem"``
 
