@@ -26,6 +26,9 @@ Because this format is based on JSON, a Document Store Database would be the ide
             "DOKDesc":[  
                "string"
             ],
+	    "shortDOK": [
+	    	"string"
+	    ],
             "type":"string",
             "clarification":"string",
             "heading":"string",
