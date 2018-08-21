@@ -4,20 +4,20 @@ Because this format is based on JSON, a Document Store Database would be the ide
 ## JSON:
 ``` JSON {  
    "claim":{  
-      "Title":"string",
-      "Grade":"string",
-      "Subject":"string",
-      "Description":"string",
-      "Short":"string",
-      "Domain":"string",
-      "Targets":[  
+      "title":"string",
+      "grade":"string",
+      "subject":"string",
+      "description":"string",
+      "short":"string",
+      "domain":"string",
+      "targets":[  
          {  
-            "Title":"string",
-            "Short":"string",
-            "Standards":[  
+            "title":"string",
+            "short":"string",
+            "standards":[  
                "string"
             ],
-            "StdDesc":[  
+            "stdDesc":[  
                "string"
             ],
             "DOK":[  
@@ -26,42 +26,42 @@ Because this format is based on JSON, a Document Store Database would be the ide
             "DOKDesc":[  
                "string"
             ],
-            "Type":"string",
-            "Clarification":"string",
-            "Heading":"string",
-            "Evidence":[  
+            "type":"string",
+            "clarification":"string",
+            "heading":"string",
+            "evidence":[  
                "string"
             ],
-            "Vocab":"string",
-            "Tools":"string",
-            "StimInfo":"string",
-            "DevNotes":"string",
-            "Complexity":"string",
-            "DualText":"string",
-            "Accessibility":"string",
-            "Stem":[  
+            "vocab":"string",
+            "tools":"string",
+            "stimInfo":"string",
+            "devNotes":"string",
+            "complexity":"string",
+            "dualText":"string",
+            "accessibility":"string",
+            "stem":[  
                "string"
             ],
-            "TaskDescription":[  
+            "taskDescription":[  
                "string"
             ],
-            "TaskModel":[  
+            "taskModel":[  
                "string"
             ],
-            "Examples":[  
+            "examples":[  
                "string"
             ],
-            "Rubrics":[  
+            "rubrics":[  
                "string"
             ],
-            "Stimulus":[  
+            "stimulus":[  
                "string"
             ],
-            "ShortStem":[  
+            "shortStem":[  
                "string"
             ],
-            "KeyDetails":"string",
-            "MSkill":"string"
+            "seyDetails":"string",
+            "mSkill":"string"
          }
       ]
    }
