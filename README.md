@@ -60,7 +60,7 @@ Because this format is based on JSON, a Document Store Database would be the ide
             "shortStem":[  
                "string"
             ],
-            "seyDetails":"string",
+            "keyDetails":"string",
             "mSkill":"string"
          }
       ]
