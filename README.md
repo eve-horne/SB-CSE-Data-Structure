@@ -305,7 +305,7 @@ So the Stem array should have 2x as many entries as TaskModel, Example, or Rubri
 ### Step 5: Getting Depth of Knowledge
 This can get pretty difficult as **sometimes** DOK information is there for a target, and **sometimes** its not.
 
-Essentially, you want to find the ``CFItem[index].abbreviatedStatement`` where ``CFItemType === "Target"``
+Essentially, you want to find the ``CFItem[index].humanCodingScheme`` where ``CFItemType === "Target"``
 then call getCFPackage on the corresponding subject's Content Specification:
 * **Smarter Balanced ELA Content Specification** 	(GUID: ``cbbb8d01-63fc-4adf-9803-a3781839b6b6``)
 * **Smarter Balanced Math Content Specification** (GUID: ``255adad7-2854-47d7-9aa4-c5e1750eb8ca``)
@@ -324,7 +324,7 @@ urn:fdc:edplancms.com:2016:cfr:DOK:X-DOK%YYY
 
 In getCFPackage(ELA Grade 3 Claim 1 Target 9):
 
-``CFItems[index].abbreviatedStatement = "E.G3.C1RI.T9"``
+``CFItems[index].humanCodingScheme = "E.G3.C1RI.T9"``
 
 In getCFPackage(Smarter Balanced ELA Content Specification):
 
