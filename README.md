@@ -97,7 +97,7 @@ Because this format is based on JSON, a Document Store Database would be the ide
 |  standards [String] | Array of standard identifiers | getCFPackage(Claim-Target Document) | ``CFItems[idxOfMeasuredSkill].humanCodingScheme`` |
 |  stdDesc [String] | Fulltext Description of above standard | getCFPackage(CCSS Import Doc) | ``CFItems[idxOfStdIdentifier].fullStatement`` |
 |  DOK [String] | Depth of knowledge fulltext WIP | getCFPackage(SB ELA/Math Content Spec) | ``CFAssociations[idxOfTarget].destinationNodeURI.uri`` |
-|  Type (String) | CAT, "PT", or "Both" - Math only has CAT - | getCFPackage(Claim-Target Document) | ``CFDocument.creator`` |
+|  type (String) | CAT, "PT", or "Both" - Math only has CAT - | getCFPackage(Claim-Target Document) | ``CFDocument.creator`` |
 |  clarificiation (String) | Clarification fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfClarification].fullStatement`` |
 |  heading (String) | Section Heading fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfHeading].fullStatement`` |
 |  wvidence [String] | Array of Required Evidence fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfEvidenceReq].fullStatement`` |
