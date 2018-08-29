@@ -5,15 +5,16 @@ Because this format is based on JSON, a Document Store Database would be the ide
 ``` JSON {  
    "claim":{  
       "title":"string",
+      "claimNumber": "string",
       "grade":"string",
       "subject":"string",
       "description":"string",
-      "short":"string",
-      "domain":"string",
+      "shortCode":"string",
       "targets":[  
          {  
             "title":"string",
-            "short":"string",
+            "shortCode":"string",
+	    "description": "string",
             "standards":[  
                "string"
             ],
@@ -63,8 +64,7 @@ Because this format is based on JSON, a Document Store Database would be the ide
             "shortStem":[  
                "string"
             ],
-            "keyDetails":"string",
-            "mSkill":"string"
+            
          }
       ]
    }
