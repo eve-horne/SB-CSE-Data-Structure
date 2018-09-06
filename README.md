@@ -43,11 +43,7 @@ Because this format is based on JSON, a Document Store Database would be the ide
 			"taskName": "string",
 			"taskDesc": "string",
 			"examples": "string",
-			"rubrics": {
-				"title": "string",
-				"description": "string",
-				"scoringNote": "string"
-			},
+			"rubrics": ["string"],
 			"stimulus": "string"
 		}],
 		
