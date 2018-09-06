@@ -65,7 +65,7 @@ Because this format is based on JSON, a Document Store Database would be the ide
 |  description (String) | Claim Fulltext | getCFPackage(SB ELA/Math Content Spec) | ``CFItem[indexOfClaim].fullStatement`` |
 |  shortCode (String) | Claim shortname | getCFPackage(SB ELA/Math Content Spec) | ``CFItem[indexOfClaim].abbreviatedStatement`` | 
 |  domain (String) | Optional Domain Fulltext | getCFPackage(SB ELA/Math Content Spec) | ``CFItem[indexOfDomain].fullStatement`` | 
-|  targets [String] | Array of target objects | getCFPackage(Target Document) | see below | 
+|  target [String] | Array of target objects | getCFPackage(Target Document) | see below | 
 
 ## Target:
 
@@ -80,7 +80,7 @@ Because this format is based on JSON, a Document Store Database would be the ide
 |  type (String) | CAT, "PT", or "Both" - Math only has CAT - | getCFPackage(Claim-Target Document) | ``CFDocument.creator`` |
 |  clarificiation (String) | Clarification fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfClarification].fullStatement`` |
 |  heading (String) | Section Heading fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfHeading].fullStatement`` |
-|  wvidence [String] | Array of Required Evidence fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfEvidenceReq].fullStatement`` |
+|  evidence [String] | Array of Required Evidence fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfEvidenceReq].fullStatement`` |
 |  vocab (String) | key/construct vocabulary | getCFPackage(Claim-Target Document) | ``CFItems[idxOfGeneralReqs].fullStatement`` |
 |  tools (String) | allowed tools | getCFPackage(Claim-Target Document) | ``CFItems[idxOfGeneralReqs].fullStatement`` |
 |  stimInfo (String) | Stimuli info | getCFPackage(Claim-Target Document) | ``CFItems[idxOfGeneralReqs].fullStatement`` |
@@ -88,10 +88,12 @@ Because this format is based on JSON, a Document Store Database would be the ide
 |  complexity (String) | Stimuli complexity | getCFPackage(Claim-Target Document) | ``CFItems[idxOfGeneralReqs].fullStatement`` |
 |  dualText (String) | Dual Text complexity | getCFPackage(Claim-Target Document) | ``CFItems[idxOfGeneralReqs].fullStatement`` |
 |  accessibility (String) | Accessibility fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfAccessibility].fullStatement`` |
-|  taskModel [String] | Array of task model fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfTaskModel].fullStatement`` |  
-|  taskDescription [String] | Parallel array to taskmodel of description fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfTaskDesc].fullStatement`` | 
+|  taskModels [String] | Array of task models| getCFPackage(Claim-Target Document) | ``CFItems[idxOfTaskModel]`` |  
+|  taskName [String] | Task Model Name| getCFPackage(Claim-Target Document) | ``CFItems[idxOfTaskModel].fullStatement`` | 
+|  taskDesc [String] | taskmodel description fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfTaskDesc].fullStatement`` | 
 |  stimulus (String) | Stimulus Fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfStimulus].fullStatement`` | 
-|  stem [String] | Array of Stems fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfStems].fullStatement`` |  
+|  stem [String] | Array of Stems | getCFPackage(Claim-Target Document) | ``CFItems[idxOfStems]`` |  
+|  stemDesc [String] | Stem Fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfStems].fullStatement`` |  
 |  example [String] | Array of TaskModel Examples | getCFPackage(Claim-Target Document) | ``CFItems[idxOfExample].fullStatement`` |  
 |  rubric [String] | Array of TaskModel Scoring rules Fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfRubric].fullStatement`` |  
 
