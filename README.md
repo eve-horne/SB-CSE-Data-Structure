@@ -3,7 +3,7 @@ This new and improved data structure takes the required data from CASE API and c
 Because this format is based on JSON, a Document Store Database would be the ideal implementation method. (e.x. MongoDB or Couchbase)
 ## JSON:
 ``` JSON {  
-   "claim" : {
+   "claim": {
 	"title": "string",
 	"claimNumber": "string",
 	"grades": ["string"],
@@ -12,53 +12,46 @@ Because this format is based on JSON, a Document Store Database would be the ide
 	"shortCode": "string",
 	"domain": "string",
 	"target": [{
-			"title": "string",
-			"shortCode": "string",
-			"description": "string",
-			"standards": [{
-					"stdCode": "string",
-					"stdDesc": "string"
-				}
-			],
-			"DOK": [{
-					"dokCode": "string",
-					"dokDesc": "string",
-					"dokShort": "string"
-				}
-			],
-			"type": "string",
-			"clarification": "string",
-			"heading": "string",
-			"evidence": [
-				"string"
-			],
-			"vocab": "string",
-			"tools": "string",
-			"stimInfo": "string",
-			"devNotes": "string",
-			"complexity": "string",
-			"dualText": "string",
-			"accessibility": "string",
-			"stem": [{
-					"stemDesc": "string",
-					"shortStem": "string"
-				}
-			],
-			"taskModels": [{
-					"taskName": "string",
-					"taskDesc": "string",
-					"examples": "string",
-					"rubrics": {
-						"title": "string",
-						"description": "string",
-						"scoringNote": "string"
-					},
-					"stimulus": "string"
-				}
-			],
-
-		}
-	]
+		"title": "string",
+		"shortCode": "string",
+		"description": "string",
+		"standards": [{
+			"stdCode": "string",
+			"stdDesc": "string"
+		}],
+		"DOK": [{
+			"dokCode": "string",
+			"dokDesc": "string",
+			"dokShort": "string"
+		}],
+		"type": "string",
+		"clarification": "string",
+		"heading": "string",
+		"evidence": ["string"],
+		"vocab": "string",
+		"tools": "string",
+		"stimInfo": "string",
+		"devNotes": "string",
+		"complexity": "string",
+		"dualText": "string",
+		"accessibility": "string",
+		"stem": [{
+			"stemDesc": "string",
+			"shortStem": "string"
+		}],
+		"taskModels": [{
+			"taskName": "string",
+			"taskDesc": "string",
+			"examples": "string",
+			"rubrics": {
+				"title": "string",
+				"description": "string",
+				"scoringNote": "string"
+			},
+			"stimulus": "string"
+		}],
+		
+	}]
 };
 
 ```
