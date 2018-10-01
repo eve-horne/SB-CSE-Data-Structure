@@ -4,51 +4,51 @@ Because this format is based on JSON, a Document Store Database would be the ide
 ## JSON:
 ``` JSON {  
    "claim": {
-	"title": string,
-	"claimNumber": string,
-	"grades": string[],
-	"subject": string,
-	"description": string,
-	"shortCode": string,
-	"domain": string,
+	"title": "string",
+	"claimNumber": "string",
+	"grades": "string[]",
+	"subject": "string",
+	"description": "string",
+	"shortCode": "string",
+	"domain": "string",
 	"target": [{
-		"title": string,
-		"shortCode": string,
-		"description": string,
+		"title": "string",
+		"shortCode": "string",
+		"description": "string",
 		"standards": [{
-			"stdCode": string,
-			"stdDesc": string
+			"stdCode": "string",
+			"stdDesc": "string"
 		}],
 		"DOK": [{
-			"dokCode": string,
-			"dokDesc": string,
-			"dokShort": string
+			"dokCode": "string",
+			"dokDesc": "string",
+			"dokShort": "string"
 		}],
-		"type": string,
-		"clarification": string,
-		"heading": string,
+		"type": "string",
+		"clarification": "string",
+		"heading": "string",
 		"evidence": [{
-            evTitle: string,
-            evDesc: string
-        }]
-		"vocab": string,
-		"tools": string,
-		"stimInfo": string,
-		"devNotes": string,
-		"complexity": string,
-		"dualText": string,
-		"accessibility": string,
+            "evTitle": "string",
+            "evDesc": "string"
+        }],
+		"vocab": "string",
+		"tools": "string",
+		"stimInfo": "string",
+		"devNotes": "string",
+		"complexity": "string",
+		"dualText": "string",
+		"accessibility": "string",
 		"stem": [{
-			"stemDesc": string,
-			"shortStem": string
+			"stemDesc": "string",
+			"shortStem": "string"
 		}],
 		"taskModels": [{
-			"taskName": string,
-			"taskDesc": string,
-			"examples": string,
-			"rubrics": string[],
-			"stimulus": string,
-            "relatedEvidence": string[]
+			"taskName": "string",
+			"taskDesc": "string",
+			"examples": "string",
+			"rubrics": "string[]",
+			"stimulus": "string",
+            "relatedEvidence": "string[]"
 		}],
 		
 	}]
