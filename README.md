@@ -4,47 +4,51 @@ Because this format is based on JSON, a Document Store Database would be the ide
 ## JSON:
 ``` JSON {  
    "claim": {
-	"title": "string",
-	"claimNumber": "string",
-	"grades": ["string"],
-	"subject": "string",
-	"description": "string",
-	"shortCode": "string",
-	"domain": "string",
+	"title": string,
+	"claimNumber": string,
+	"grades": string[],
+	"subject": string,
+	"description": string,
+	"shortCode": string,
+	"domain": string,
 	"target": [{
-		"title": "string",
-		"shortCode": "string",
-		"description": "string",
+		"title": string,
+		"shortCode": string,
+		"description": string,
 		"standards": [{
-			"stdCode": "string",
-			"stdDesc": "string"
+			"stdCode": string,
+			"stdDesc": string
 		}],
 		"DOK": [{
-			"dokCode": "string",
-			"dokDesc": "string",
-			"dokShort": "string"
+			"dokCode": string,
+			"dokDesc": string,
+			"dokShort": string
 		}],
-		"type": "string",
-		"clarification": "string",
-		"heading": "string",
-		"evidence": ["string"],
-		"vocab": "string",
-		"tools": "string",
-		"stimInfo": "string",
-		"devNotes": "string",
-		"complexity": "string",
-		"dualText": "string",
-		"accessibility": "string",
+		"type": string,
+		"clarification": string,
+		"heading": string,
+		"evidence": [{
+            evTitle: string,
+            evDesc: string
+        }]
+		"vocab": string,
+		"tools": string,
+		"stimInfo": string,
+		"devNotes": string,
+		"complexity": string,
+		"dualText": string,
+		"accessibility": string,
 		"stem": [{
-			"stemDesc": "string",
-			"shortStem": "string"
+			"stemDesc": string,
+			"shortStem": string
 		}],
 		"taskModels": [{
-			"taskName": "string",
-			"taskDesc": "string",
-			"examples": "string",
-			"rubrics": ["string"],
-			"stimulus": "string"
+			"taskName": string,
+			"taskDesc": string,
+			"examples": string,
+			"rubrics": string[],
+			"stimulus": string,
+            "relatedEvidence": string[]
 		}],
 		
 	}]
@@ -60,12 +64,12 @@ Because this format is based on JSON, a Document Store Database would be the ide
 |  :------ | :------ | :------ | :------ | 
 |  title (String)  | Claim Title | getAllCFDocuments() | ``CFDocument[index].title`` | 
 | claimNumber (String)| Claim # | getAllCFDocuments() | ``CFDocument[index].title`` |
-|  grades [String] | Grade # 01-12 also includes HS for 09-12 | getAllCFDocuments() | ``CFDocument[index].notes`` |
+|  grades string[] | Grade # 01-12 also includes HS for 09-12 | getAllCFDocuments() | ``CFDocument[index].notes`` |
 |  subject (String) | "Mathematics" or  "English Language Arts" | getAllCFDocuments() | ``CFDocument[index].subjectURI[0].title`` |
 |  description (String) | Claim Fulltext | getCFPackage(SB ELA/Math Content Spec) | ``CFItem[indexOfClaim].fullStatement`` |
 |  shortCode (String) | Claim shortname | getCFPackage(SB ELA/Math Content Spec) | ``CFItem[indexOfClaim].abbreviatedStatement`` | 
 |  domain (String) | Optional Domain Fulltext | getCFPackage(SB ELA/Math Content Spec) | ``CFItem[indexOfDomain].fullStatement`` | 
-|  target [String] | Array of target objects | getCFPackage(Target Document) | see below | 
+|  target string[] | Array of target objects | getCFPackage(Target Document) | see below | 
 
 ## Target:
 
@@ -74,13 +78,13 @@ Because this format is based on JSON, a Document Store Database would be the ide
 |  title (String) | Target Name | getCFPackage(Claim-Target Document) | ``CFDocument.title`` |
 |  shortCode (String) | Target shortname | getCFPackage(Claim-Target Document) | ``CFDocument.notes`` |
 |  description (String) | Target Fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfTarget].fullStatement`` |  
-|  standards [String] | Array of standard identifiers | getCFPackage(Claim-Target Document) | ``CFItems[idxOfMeasuredSkill].humanCodingScheme`` |
-|  stdDesc [String] | Fulltext Description of above standard | getCFPackage(CCSS Import Doc) | ``CFItems[idxOfStdIdentifier].fullStatement`` |
-|  DOK [String] | Depth of knowledge fulltext WIP | getCFPackage(SB ELA/Math Content Spec) | ``CFAssociations[idxOfTarget].destinationNodeURI.uri`` |
+|  standards string[] | Array of standard identifiers | getCFPackage(Claim-Target Document) | ``CFItems[idxOfMeasuredSkill].humanCodingScheme`` |
+|  stdDesc string[] | Fulltext Description of above standard | getCFPackage(CCSS Import Doc) | ``CFItems[idxOfStdIdentifier].fullStatement`` |
+|  DOK string[] | Depth of knowledge fulltext WIP | getCFPackage(SB ELA/Math Content Spec) | ``CFAssociations[idxOfTarget].destinationNodeURI.uri`` |
 |  type (String) | CAT, "PT", or "Both" - Math only has CAT - | getCFPackage(Claim-Target Document) | ``CFDocument.creator`` |
 |  clarificiation (String) | Clarification fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfClarification].fullStatement`` |
 |  heading (String) | Section Heading fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfHeading].fullStatement`` |
-|  evidence [String] | Array of Required Evidence fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfEvidenceReq].fullStatement`` |
+|  evidence string[] | Array of Required Evidence fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfEvidenceReq].fullStatement`` |
 |  vocab (String) | key/construct vocabulary | getCFPackage(Claim-Target Document) | ``CFItems[idxOfGeneralReqs].fullStatement`` |
 |  tools (String) | allowed tools | getCFPackage(Claim-Target Document) | ``CFItems[idxOfGeneralReqs].fullStatement`` |
 |  stimInfo (String) | Stimuli info | getCFPackage(Claim-Target Document) | ``CFItems[idxOfGeneralReqs].fullStatement`` |
@@ -88,14 +92,14 @@ Because this format is based on JSON, a Document Store Database would be the ide
 |  complexity (String) | Stimuli complexity | getCFPackage(Claim-Target Document) | ``CFItems[idxOfGeneralReqs].fullStatement`` |
 |  dualText (String) | Dual Text complexity | getCFPackage(Claim-Target Document) | ``CFItems[idxOfGeneralReqs].fullStatement`` |
 |  accessibility (String) | Accessibility fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfAccessibility].fullStatement`` |
-|  taskModels [String] | Array of task models| getCFPackage(Claim-Target Document) | ``CFItems[idxOfTaskModel]`` |  
-|  taskName [String] | Task Model Name| getCFPackage(Claim-Target Document) | ``CFItems[idxOfTaskModel].fullStatement`` | 
-|  taskDesc [String] | taskmodel description fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfTaskDesc].fullStatement`` | 
+|  taskModels string[] | Array of task models| getCFPackage(Claim-Target Document) | ``CFItems[idxOfTaskModel]`` |  
+|  taskName string[] | Task Model Name| getCFPackage(Claim-Target Document) | ``CFItems[idxOfTaskModel].fullStatement`` | 
+|  taskDesc string[] | taskmodel description fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfTaskDesc].fullStatement`` | 
 |  stimulus (String) | Stimulus Fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfStimulus].fullStatement`` | 
-|  stem [String] | Array of Stems | getCFPackage(Claim-Target Document) | ``CFItems[idxOfStems]`` |  
-|  stemDesc [String] | Stem Fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfStems].fullStatement`` |  
-|  example [String] | Array of TaskModel Examples | getCFPackage(Claim-Target Document) | ``CFItems[idxOfExample].fullStatement`` |  
-|  rubric [String] | Array of TaskModel Scoring rules Fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfRubric].fullStatement`` |  
+|  stem string[] | Array of Stems | getCFPackage(Claim-Target Document) | ``CFItems[idxOfStems]`` |  
+|  stemDesc string[] | Stem Fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfStems].fullStatement`` |  
+|  example string[] | Array of TaskModel Examples | getCFPackage(Claim-Target Document) | ``CFItems[idxOfExample].fullStatement`` |  
+|  rubric string[] | Array of TaskModel Scoring rules Fulltext | getCFPackage(Claim-Target Document) | ``CFItems[idxOfRubric].fullStatement`` |  
 
 ## From CASE to SB-CSE Data Structure (Step-by-step):
 This section describes exactly what is required to scrape data from CASE to our new structure. This guide should be referenced when designing a script to scrape all data from CASE for our new DB.
